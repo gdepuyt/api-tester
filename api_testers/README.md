@@ -36,21 +36,61 @@ pip install -r requirements.txt
    pytest -s -v
    ```
 
+**Core Folders**
+
+* **test/**: Contains all your API test case files. Here's where you'll write the Pytest code to define your API tests.
+   * **api_tests.py**: A sample file demonstrating how to write basic API tests. You can add more test files as needed.
+
+* **utils/**: Houses supporting utilities and helper code for your testing framework.
+    * **config.py**: Handles configuration management, reading environment variables, and loading different configurations based on the environment.
+
+**Essential Files**
+
+* **conftest.py**: Provides Pytest fixtures and potentially additional configuration for your tests.  Fixtures are reusable bits of code used to set up the test environment or provide common test data.
+
+* **README.md**: The project's documentation. Explains its purpose, usage instructions, structure, examples, and customization options.
+
+* **requirements.txt**:  Lists all the Python packages and dependencies  required for the project to function correctly.
+
+* **pytest.ini**: Configuration file for customizing Pytest's behavior and settings.
+
+**How it all works together:**
+
+1. You write your test cases in the `test` directory (such as within `api_tests.py`), making use of the `requests` library or other HTTP clients to interact with your API.
+
+2. `utils/config.py` assists in managing different test environments (e.g., "dev," "stage," "prod") and loading appropriate API URLs, credentials, and other configuration details.
+
+3. Fixtures defined in `conftest.py` can offer test setup and teardown functionality, potentially sharing resources across tests.
+
+4. You execute the tests using the `pytest` command, which automatically discovers and runs your test cases, leveraging any configurations specified in your `pytest.ini` file.
+
+
+
+
 **Structure**
 
 ```
 api-tester/
-├── conftest.py          # Pytest configuration and fixtures
-├── test/
-│   ├── api_tests.py      # API test cases
-│   └── ...               # Other test files (optional)
-├── utils/
-│   ├── config.py        # Configuration logic and classes
-│   └── __init__.py      # Empty file to mark the directory as a package
-├── README.md            # This file
-├── requirements.txt     # Project dependencies
-└── pytest.ini           # Pytest configuration file
+├── README.md
+├── config
+│   ├── dev.ini
+│   ├── prod.ini
+│   ├── qa.ini
+│   └── staging.ini
+├── pytest.ini
+├── requirements.txt
+└── tests
+    ├── conftest.py
+    ├── test_api.py
+    └── utils
+        ├── __init__.py
+        └── config.py
 ```
+
+
+
+
+
 
 **Example Test**
 
