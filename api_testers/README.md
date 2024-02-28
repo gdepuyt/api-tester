@@ -1,32 +1,77 @@
-# Tests d'API avec Pytest
+## API Tester
 
-Ce projet contient les tests d'API pour __PROJECT_NAME__.
+**Description**
 
-## Exécution des tests
+This Python project provides a framework for testing APIs using the Pytest library. It offers functionalities for:
 
-pytest -s -v
+* **Configuring different test environments:** Easily switch between development, staging, and production environments using configuration files.
+* **Sending API requests and handling responses:** Make HTTP requests to your API endpoints and assert the expected responses.
+* **Defining test cases and assertions:** Write clear and maintainable test cases using Pytest's features.
+* **Logging test execution and results:** Track test execution details and results for better debugging and monitoring.
 
+**Installation**
 
-## Structure du projet
+1. **Clone the repository:**
 
-* `README.md`: Ce fichier.
-* `config`: Contient les fichiers de configuration pour différents environnements.
-* `test`: Contient les fichiers de test.
-* `utils`: Contient des modules utilitaires.
+```bash
+git clone https://github.com/gdepuyt/api-tester.git
+```
 
-## Configuration
+2. **Install dependencies:**
 
-Le fichier `test.ini` contient la structure de base pour les paramètres de l'application, tels que l'API, la base de données et le SMTP. Vous pouvez adapter la structure et les valeurs en fonction de vos besoins.
+```bash
+pip install -r requirements.txt
+```
 
-## Tests
+**Usage**
 
-Le fichier `api_tests.py` contient des exemples de tests pour l'API. Vous pouvez ajouter d'autres tests et utiliser les marqueurs `slow` et `integration` pour les catégoriser.
+1. **Configure the test environment:**
 
-## Remarques
+   * Edit the configuration files in the `config` directory to specify details like API base URLs
+   * You can leverage environment variables (e.g., `ENV`) to activate different configurations.
 
-* Assurez-vous de remplacer les valeurs par défaut dans les fichiers `.ini` avec les informations de votre application.
-* Vous pouvez adapter le code et la configuration en fonction de vos besoins spécifiques.
+2. **Run the tests:**
 
-## Ressources supplémentaires
+   ```bash
+   pytest -s -v
+   ```
 
-* Documentation de Pytest: [https://pytest.org/](https://pytest.org/)
+**Structure**
+
+```
+api-tester/
+├── conftest.py          # Pytest configuration and fixtures
+├── test/
+│   ├── api_tests.py      # API test cases
+│   └── ...               # Other test files (optional)
+├── utils/
+│   ├── config.py        # Configuration logic and classes
+│   └── __init__.py      # Empty file to mark the directory as a package
+├── README.md            # This file
+├── requirements.txt     # Project dependencies
+└── pytest.ini           # Pytest configuration file
+```
+
+**Example Test**
+
+```python
+# test/api_tests.py
+from utils.config import api_config
+
+def test_api_endpoint():
+    """
+    Tests the `/api/v1/users` endpoint of the API.
+
+    Args:
+        api_config: The `ApiConfig` instance for the environment.
+
+    Returns:
+        None.
+    """
+    base_url: str = api_config.base_url
+    endpoint: str = "/api/v1/users"
+    response: requests.Response = requests.get(f"{base_url}{endpoint}")
+
+    assert response.status_code == 200
+```
+
