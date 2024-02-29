@@ -33,7 +33,7 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def env_cli(request):
     """
     Retrieves the environment name provided with the `--env` command-line option.
@@ -48,7 +48,7 @@ def env_cli(request):
     return request.config.getoption("--env")
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def environment(env_cli):
     """
     Retrieves the environment from the `ENV` environment variable,
@@ -73,7 +73,7 @@ def environment(env_cli):
     yield env
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def api_config(environment: str) -> ApiConfig:
     """
     Creates an instance of the `ApiConfig` class for the specified environment.

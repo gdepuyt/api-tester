@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "OfficeId": {
+        "type": ["string","null"]
+      },
+      "OfficeName": {
+        "type": ["string","null"]
+      },
+      "Language": {
+        "type": ["string","null"]
+      },
+      "FIBrocom": {
+        "type": "null"
+      },
+      "Brocom": {
+        "type": ["string","null"]
+      },
+      "Target": {
+        "type": ["string","null"]
+      },
+      "Adseg012": {
+        "type": ["integer","null"]
+      },
+      "Viseg012": {
+        "type": ["integer","null"]
+      },
+      "Vgseg012": {
+        "type": ["integer","null"]
+      },
+      "ProdSignIardP": {
+        "type": ["integer","null"]
+      },
+      "ProdSignIardE": {
+        "type": ["integer","null"]
+      },
+      "ProdSignViePP": {
+        "type": ["integer","null"]
+      },
+      "ProdSignViepU": {
+        "type": ["integer","null"]
+      },
+      "ProdSignEB": {
+        "type": ["integer","null"]
+      },
+      "ProdSignTotal": {
+        "type": ["integer","null"]
+      },
+      "ProdSignTotIard": {
+        "type": ["integer","null"]
+      },
+      "ProdSignTotVie": {
+        "type": ["integer","null"]
+      },
+      "MaxFiltTech": {
+        "type": ["integer","null"]
+      },
+      "BrokerAddressDetailsId": {
+        "type": "null"
+      },
+      "Distance": {
+        "type": "number"
+      },
+      "ProductLineCode": {
+        "type": ["string","null"]
+      },
+      "ProductLineLabel": {
+        "type": ["string","null"]
+      },
+      "Id": {
+        "type": ["integer","null"]
+      },
+      "LocationFR": {
+        "type": ["string","null"]
+      },
+      "LocationNL": {
+        "type": ["string","null"]
+      },
+      "Telephone": {
+        "type": ["string","null"]
+      },
+      "Email": {
+        "type": ["string","null"]
+      },
+      "Website": {
+        "type": ["string","null"]
+      },
+      "Website2": {
+        "type": "null"
+      },
+      "Street": {
+        "type": ["string","null"]
+      },
+      "AddressFR": {
+        "type": ["string","null"]
+      },
+      "ZipCode": {
+        "type": ["string","null"]
+      },
+      "AddressNL": {
+        "type": ["string","null"]
+      },
+      "Fax": {
+        "type": ["string","null"]
+      },
+      "Country": {
+        "type": ["string","null"]
+      },
+      "GeoCodeId": {
+        "type": ["integer","null"]
+      },
+      "Address3": {
+        "type": "null"
+      },
+      "GeoCodesSearch": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": ["integer","null"]
+          },
+          "Latitude": {
+            "type": "number"
+          },
+          "Longitude": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "Id",
+          "Latitude",
+          "Longitude"
+        ]
+      }
+    },
+    "required": [
+      "OfficeId",
+      "OfficeName",
+      "Language",
+      "FIBrocom",
+      "Brocom",
+      "Target",
+      "Adseg012",
+      "Viseg012",
+      "Vgseg012",
+      "ProdSignIardP",
+      "ProdSignIardE",
+      "ProdSignViePP",
+      "ProdSignViepU",
+      "ProdSignEB",
+      "ProdSignTotal",
+      "ProdSignTotIard",
+      "ProdSignTotVie",
+      "MaxFiltTech",
+      "BrokerAddressDetailsId",
+      "Distance",
+      "ProductLineCode",
+      "ProductLineLabel",
+      "Id",
+      "LocationFR",
+      "LocationNL",
+      "Telephone",
+      "Email",
+      "Website",
+      "Website2",
+      "Street",
+      "AddressFR",
+      "ZipCode",
+      "AddressNL",
+      "Fax",
+      "Country",
+      "GeoCodeId",
+      "Address3",
+      "GeoCodesSearch"
+    ]
+  }
+}
