@@ -7,7 +7,7 @@
     "explorer.excludeGitIgnore": true,
     "python.analysis.typeCheckingMode": "basic",
     "python.testing.pytestArgs": [
-        "api_testers"
+        "tests"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
