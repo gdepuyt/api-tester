@@ -5,5 +5,12 @@
         "./api_tests"
     ],
     "explorer.excludeGitIgnore": true,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "python.testing.pytestArgs": [
+        "api_testers"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    // "python.testing.cwd": "${workspaceFolder}/api_testers",
+    "python.envFile": "${workspaceFolder}/.env"
 }
