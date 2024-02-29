@@ -70,15 +70,16 @@ pip install -r requirements.txt
 **Structure**
 
 ```
-api-tester/
+.
 ├── README.md
 ├── config
 │   ├── dev.ini
 │   ├── prod.ini
-│   ├── qa.ini
-│   └── staging.ini
+│   ├── test.ini
+│   └── uat.ini
 ├── pytest.ini
 ├── requirements.txt
+├── src
 └── tests
     ├── conftest.py
     ├── test_api.py
@@ -114,4 +115,9 @@ def test_api_endpoint():
 
     assert response.status_code == 200
 ```
+
+**Reference - sources**
+
+* https://docs.pytest.org/
+* https://pytest-with-eric.com/configuration/pytest-config-file/#Getting-Started
 
