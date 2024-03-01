@@ -3,7 +3,7 @@ import random
 import requests
 import pytest
 
-from utils.schema_validator import ValidateSchema
+from utils.validate_schema import ValidateSchema
 from ratelimit import limits, sleep_and_retry
 
 logger = logging.getLogger(__name__)

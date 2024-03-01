@@ -3,7 +3,7 @@ import jsonschema
 from jsonschema import validate
 
 class ValidateSchema:
-    """Class for validating JSON data against a schema."""
+    """Class  for validating JSON data against a schema."""
 
     def __init__(self, schema_file="user_schema.json"):
         """
