@@ -37,7 +37,7 @@ class ApiClient:
         """
 
         if self.rate_limit:
-            self._limiter.wait()
+            self._limiter.wait() #type:ignore
 
         if self.sleep_time:
             time.sleep(self.sleep_time)

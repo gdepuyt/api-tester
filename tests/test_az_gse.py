@@ -6,25 +6,12 @@ import pytest
 from utils.validate_schema import ValidateSchema
 from utils.api_client import ApiClient
 from ratelimit import limits, sleep_and_retry
+from utils.generator import Generator
 
 logger = logging.getLogger(__name__)
+cp_generator : Generator = Generator(5, False)
 
-
-def _generate_random_postal_code_list(x):
-  """
-  Generates a random list of x postal between 1000 and 9992 (inclusive).
-
-  Args:
-      x (int): The number of elements in the desired list.
-
-  Returns:
-      list: A list of x random integers between 1000 and 9992.
-  """
-
-  return [random.randint(1000, 9992) for _ in range(x)]
-
-
-@pytest.mark.parametrize("postal_code", _generate_random_postal_code_list(5))
+@pytest.mark.parametrize("postal_code", cp_generator.postal_codes_list, ids=cp_generator.postal_codes_with_ids)
 def test_az_gse_endpoint(api_config, postal_code):
     """
     Tests the `/GetBrokerDetails` endpoint with different postal codes.
@@ -35,7 +22,7 @@ def test_az_gse_endpoint(api_config, postal_code):
     """
 
     # Create the API client
-    api_client = ApiClient(api_config.az_gse_base_url,0,5)
+    api_client = ApiClient(api_config.az_gse_base_url,0,1)
 
     endpoint = "/GetBrokerDetails"
     params = {
