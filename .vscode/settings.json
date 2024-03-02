@@ -2,6 +2,8 @@
     "python.analysis.extraPaths": [
         "/workspaces/api-test/config",
         "/home/vscode/.local/lib/python3.12/site-packages",
+        "./tests",
+        "./tests"
     ],
     "explorer.excludeGitIgnore": true,
     "python.analysis.typeCheckingMode": "basic",
@@ -11,5 +13,7 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     // "python.testing.cwd": "${workspaceFolder}/api_testers",
-    "python.envFile": "${workspaceFolder}/.env"
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.experiments.optInto": ["pythonTestAdapter"],
+    "python.analysis.logLevel": "Trace"
 }

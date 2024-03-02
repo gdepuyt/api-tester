@@ -32,5 +32,5 @@ class ValidateSchema:
         try:
             validate(instance=json_data, schema=self.schema)
             return True, "Given JSON data is Valid"
-        except jsonschema.exceptions.ValidationError as err:
+        except jsonschema.exceptions.ValidationError as err:# type: ignore
             return False, "Given JSON data is Invalid: {}".format(err)
