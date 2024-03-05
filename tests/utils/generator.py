@@ -16,7 +16,7 @@ class Generator:
         if random:
             self.zipcode = [randint(1000, 9000) for _ in range(number_of_elements)]
         else:
-            self.zipcode = [1000, 7120, 6540, 7000][:number_of_elements]
+            self.zipcode = [1000, 7120, 9000, 7000][:number_of_elements]
 
         self.number_of_elements = number_of_elements
         self.random = random
