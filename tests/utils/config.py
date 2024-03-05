@@ -44,6 +44,20 @@ class ApiConfig:
         self.config.read(f"config/{env}.ini")
 
     @property
+    def selected_environment(self) -> str:
+        """
+        Returns the seleted environment.
+
+        Args:
+            None.
+
+        Returns:
+            The environement selected  as a string.
+        """
+        
+        return self.env
+        
+    @property
     def base_url(self) -> str:
         """
         Returns the base URL of the API for the specified environment.
@@ -56,3 +70,61 @@ class ApiConfig:
         """
         
         return self.config["API"]["base_url"]
+    
+    @property
+    def az_gse_base_url(self) -> str:
+        """
+        Returns the base URL of the API for the specified environment.
+
+        Args:
+            None.
+
+        Returns:
+            The base URL for the Az Generic Search Engine as a string.
+        """
+        
+        return self.config["API"]["az_gse_base_url"]
+    
+    @property
+    def az_gse_base_schema(self) -> str:
+        """
+        Returns the base URL of the API for the specified environment.
+
+        Args:
+            None.
+
+        Returns:
+            The base URL for the Az Generic Search Engine as a string.
+        """
+        
+        return self.config["API"]["az_gse_base_schema"]
+
+    @property
+    def az_gse_getproduct_schema(self) -> str:
+        """
+        Returns the base URL of the API for the specified environment.
+
+        Args:
+            None.
+
+        Returns:
+            The base URL for the Az Generic Search Engine as a string.
+        """
+        
+        return self.config["API"]["az_gse_getproduct_schema"]
+    
+    @property
+    def az_gse_getpostalcodes_schema(self) -> str:
+            """
+            Returns the base URL of the API for the specified environment.
+
+            Args:
+                None.
+
+            Returns:
+                The base URL for the Az Generic Search Engine as a string.
+            """
+            
+            return self.config["API"]["az_gse_getpostalcodes_schema"]
+
+    

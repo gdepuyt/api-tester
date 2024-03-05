@@ -120,4 +120,5 @@ def test_api_endpoint():
 
 * https://docs.pytest.org/
 * https://pytest-with-eric.com/configuration/pytest-config-file/#Getting-Started
+* https://github.com/microsoft/vscode-python/issues/18821
 
