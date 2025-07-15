@@ -10,7 +10,7 @@
 		"ghcr.io/devcontainers-contrib/features/isort:2": {},
 		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
 		"ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {},
-		"ghcr.io/hspaans/devcontainer-features/pytest:1": {}
+		"ghcr.io/hspaans/devcontainer-features/pytest:2": {}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
